@@ -1,0 +1,17 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+    <h1>Детальная информация</h1>
+    <h2>{{ lang_key.title }}</h2>
+    <img src="{{ lang_key.image.url }}"  alt="{{ lang_key.title }}">
+    <p>{{ lang_key.description }}</p>
+    <p>{{ lang_key.actuality }}</p>
+    <p>{{ lang_key.created_at }}</p>
+
+    <iframe src="{{lang_key.video}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+</body>
+</html>

@@ -1,0 +1,38 @@
+*{
+box-sizing:border-box
+}
+
+.books{
+display:flex;
+justify-content: space-around
+}
+
+.book{
+width: 30%;
+padding: 10px;
+border: 1px solid gray;
+border-radius: 5px;
+box-shadow: 10px -5px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.detail_btn{
+cursor: pointer;
+padding: 10px;
+border:none;
+border-radius: 5px;
+background-color: #2d2d9a;
+font-weight: bold;
+color: #fff;
+}
+
+.book_image{
+width:100%}
+
+img{
+width:100% !important;
+}
+
+.title_main{
+margin: 10px;
+}
+
