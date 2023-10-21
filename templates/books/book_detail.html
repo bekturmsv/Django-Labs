@@ -1,3 +1,5 @@
+{% include 'books/header.html' %}
+
 
 <html lang="en">
 <head>
@@ -5,13 +7,32 @@
     <title>Details</title>
 </head>
 <body>
-    <h1>Детальная информация</h1>
-    <h2>{{ lang_key.title }}</h2>
-    <img src="{{ lang_key.image.url }}"  alt="{{ lang_key.title }}">
-    <p>{{ lang_key.description }}</p>
-    <p>{{ lang_key.actuality }}</p>
-    <p>{{ lang_key.created_at }}</p>
+   <center><h1>Детальная информация</h1></center>
+    <h2>Название: {{ book_key.title }}</h2>
+    <div class="details">
+        <div class="img_detail">
+    <img  src="{{ book_key.image.url }}"  alt="{{ book_key.title }}">
+        </div>
+        <div class="details_desc">
+            {{ book_key.description }}
+             <p>{{ book_key.actuality }}</p>
+    <iframe src="{{book_key.video}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+    <p>{{ book_key.created_at }}</p>
 
-    <iframe src="{{lang_key.video}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        </div>
+    </div>
+
+    <br>
+    <h2>Комментарии:</h2>
+    <table>
+         {% for i in book_key.review_object.all %}
+    <tr>
+        <td>{{i.created_at}}</td> <td>{{i.text_review}}</td> <td>{{i.rate_stars}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+
 </body>
 </html>
+
+{% include 'books/footer.html' %}

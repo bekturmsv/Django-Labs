@@ -1,0 +1,23 @@
+{% include 'books/header.html' %}
+
+<br><center>
+    <span class="badge text-bg-warning">
+        <h1>
+            Топ 3 игры 2023
+        </h1>
+    </span>
+</center> <br>
+
+<div class="flex">
+    {% for i in lang_key %}
+    <div class="card" style="width: 18rem">
+        <img src="{{ i.image.url }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ i.title }}</h5>
+            <a href="/lang_list/{{ i.id }}/delete/" class="btn btn-primary">Удалить</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% include 'books/footer.html' %}

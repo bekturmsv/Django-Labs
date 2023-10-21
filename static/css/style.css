@@ -1,13 +1,15 @@
 *{
-box-sizing:border-box
+box-sizing:border-box;
 }
 
 .books{
 display:flex;
+flex-wrap:wrap;
 justify-content: space-around
 }
 
 .book{
+margin: 10px;
 width: 30%;
 padding: 10px;
 border: 1px solid gray;
@@ -25,6 +27,15 @@ font-weight: bold;
 color: #fff;
 }
 
+.delete_btn{
+cursor: pointer;
+padding: 10px;
+border:none;
+border-radius: 5px;
+background-color: #d91414;
+font-weight: bold;
+color: #fff;
+}
 .book_image{
 width:100%}
 
@@ -36,3 +47,29 @@ width:100% !important;
 margin: 10px;
 }
 
+table, table td{
+border:1px solid gray;
+}
+
+td{
+padding: 10px}
+
+.img_detail{
+width: 100%}
+
+.details_desc{
+padding: 10px
+}
+
+.details{
+display: flex;
+padding: 10px
+}
+
+footer{
+margin-top: 30px;
+position: sticky;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
