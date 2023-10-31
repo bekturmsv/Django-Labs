@@ -3,7 +3,7 @@
 <h1>Топ 3 игры 2023</h1>
 
 <div class="books">
-{% for i in lang_key %}
+{% for i in object_list %}
    <div class="book">
                 <div class="book_image">
                 <img src="{{ i.image.url }}" alt="{{ i.title }}">
@@ -11,11 +11,11 @@
                 <div class="book_info">
                     <h3>{{ i.title }}</h3>
                     <p>{{ i.description }}</p>
-                    <a href="/book_list/{{i.id}}/delete/">
-                        <button class="delete_btn">
-                            Удалить
-                        </button>
-                    </a>
+<!--                    <a href="/book_list/{{i.id}}/delete/">-->
+<!--                        <button class="delete_btn">-->
+<!--                            Удалить-->
+<!--                        </button>-->
+<!--                    </a>-->
                     <a href="/book_detail/{{i.id}}">
                         <button class="detail_btn">
                             Подробнее

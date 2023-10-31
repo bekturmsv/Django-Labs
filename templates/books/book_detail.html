@@ -8,24 +8,27 @@
 </head>
 <body>
    <center><h1>Детальная информация</h1></center>
-    <h2>Название: {{ book_key.title }}</h2>
+    <h2>Название: {{ object.title }}</h2>
     <div class="details">
         <div class="img_detail">
-    <img  src="{{ book_key.image.url }}"  alt="{{ book_key.title }}">
+    <img  src="{{ object.image.url }}"  alt="{{ object.title }}">
         </div>
         <div class="details_desc">
-            {{ book_key.description }}
-             <p>{{ book_key.actuality }}</p>
-    <iframe src="{{book_key.video}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
-    <p>{{ book_key.created_at }}</p>
+            {{ object.description }}
+             <p>{{ object.actuality }}</p>
+             <p>Цена: {{object.cost}} $</p>
+    <iframe src="{{object.video}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
 
+    <p>{{ object.created_at }}</p>
+            <button class="detail_btn"><a href="/book_list/{{ object.id }}/update/" >Изменить</a></button>
+            <button class="delete_btn"><a href="/book_list/{{ object.id }}/delete/" >Удалить</a></button>
         </div>
     </div>
 
     <br>
     <h2>Комментарии:</h2>
     <table>
-         {% for i in book_key.review_object.all %}
+         {% for i in object.review_object.all %}
     <tr>
         <td>{{i.created_at}}</td> <td>{{i.text_review}}</td> <td>{{i.rate_stars}}</td>
     </tr>

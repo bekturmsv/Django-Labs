@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Вы уверенны что хотите дропнуть эту книгу?</h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <button type="submit">ДА</button>
+    <button><a href="/">НЕТ</a></button>
+</form>
+</body>
+</html>
