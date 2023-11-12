@@ -1,0 +1,28 @@
+{% include "header.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<body >
+<p><center>
+    <h1> Название : {{object.name}}</h1>
+</center></p>
+<div style="padding: 15px">
+    <p>Стоимость : {{object.cost}}</p>
+<p>Дата создания : {{object.created_at}}</p>
+
+<h3>Тэги:</h3>
+<ul>
+    {% for i in object.tag.all %}
+        <li>
+            <h3>#{{ i.name }}</h3>
+        </li>
+    {% endfor %}
+</ul>
+</div>
+
+</body>
+</html>

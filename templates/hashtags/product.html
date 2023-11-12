@@ -1,0 +1,24 @@
+{% include "header.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TAgs</title>
+</head>
+<body>
+<p>
+<center><h1>Хэштеги</h1></center>
+</p>
+<ol style="font-size: 24px">
+    {% for i in object_list %}
+    <li style="border-bottom: 1px solid black; padding-bottom: 20px">
+        <h3>Название : {{i.name}}</h3>
+        Хотите получить больше информации? <a style="color:blue" href="/product_tags/{{i.id}}/">Детально...</a>
+    </li>
+    {% endfor %}
+</ol>
+
+
+</body>
+</html>
