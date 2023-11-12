@@ -1,0 +1,33 @@
+{% include 'header.html' %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+   <center><h1>Детальная информация</h1></center>
+    <h2>Название: {{ object.name }}</h2>
+    <div class="details">
+        <div class="img_cloth_detail">
+    <img  src="{{ object.image.url }}"  alt="{{ object.title }}">
+        </div>
+        <div class="details_desc">
+            {{ object.description }}
+             <p>{{ object.actuality }}</p>
+             <p>Цена: {{object.price}} $</p>
+                <p class="card-text">Размер: {{object.size}}</p>
+
+    <p>Дата публикации:  {{ object.created_at }}</p>
+<!--            <button class="detail_btn"><a href="/book_list/{{ object.id }}/update/" >Изменить</a></button>-->
+<!--            <button class="delete_btn"><a href="/book_list/{{ object.id }}/delete/" >Удалить</a></button>-->
+        </div>
+    </div>
+
+
+
+</body>
+</html>
+
+{% include 'footer.html' %}

@@ -5,7 +5,8 @@ box-sizing:border-box;
 .books{
 display:flex;
 flex-wrap:wrap;
-justify-content: space-around
+justify-content: space-around;
+align-items: flex-start;
 }
 
 .book{
@@ -37,11 +38,14 @@ font-weight: bold;
 color: #fff;
 }
 .book_image{
-width:100%}
+width:100%;
+}
 
 img{
 width:100% !important;
 }
+
+
 
 .title_main{
 margin: 10px;
@@ -77,4 +81,8 @@ position: sticky;
 a{
 text-decoration: none;
 color: inherit;
+}
+
+.img_cloth_detail{
+width: 50%
 }

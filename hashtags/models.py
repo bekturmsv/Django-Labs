@@ -4,7 +4,7 @@ class Tag(models.Model):
     name = models.CharField(max_length=100,verbose_name="Добавьте хэштег")
 
     def __str__(self):
-        return f'x{self.name}'
+        return f'#{self.name}'
 
 
 class Product(models.Model):

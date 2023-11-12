@@ -1,0 +1,40 @@
+{% include "header.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All clothes</title>
+</head>
+<body>
+<div class="books">
+        {%for cloth in products %}
+        <div class="book" >
+            <h1>{{cloth.name}}</h1>
+            <div class="book_image">
+            <img src="{{cloth.image.url}}" class="card-img-top" alt="...">
+
+            </div>
+
+            <div class="book_info" style="padding-top:10px">
+                <h5 class="card-title">{{cloth.description}}</h5>
+                <p class="card-text">Размер: {{cloth.size}}</p>
+                <p class="card-text">Цена: {{cloth.price}}</p>
+                <p class="card-text">Дата публикации: {{cloth.created_at}}</p>
+                {% for cloth in object.tag.all %}
+                    <li>
+                        <h2>#{{i.name}}</h2>
+                    </li>
+                {% endfor %}
+
+                <a href=" {% url 'cloth_detail' id=cloth.id %}"><button class="detail_btn" >Посмотреть детали</button></a>
+                </div>
+
+        </div>
+
+        {% endfor %}
+    </div>
+</body>
+</html>
+
+{% include 'footer.html' %}

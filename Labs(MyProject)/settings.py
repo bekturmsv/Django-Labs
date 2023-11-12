@@ -28,7 +28,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'book.apps.BookConfig',
     "custom_users",
-    "hashtags"
+    "hashtags",
+    "cloth"
 ]
 
 MIDDLEWARE = [

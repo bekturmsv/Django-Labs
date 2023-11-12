@@ -9,12 +9,12 @@ class ProductView(generic.ListView):
     def get_queryset(self):
         return self.queryset
 
-class MusicHashtagsViews(generic.ListView):
-    queryset = Product.objects.filter(tag__name='Музыка')
-    template_name = "hashtags/product_music.html"
-
-    def get_queryset(self):
-        return self.queryset
+# class MusicHashtagsViews(generic.ListView):
+#     queryset = Product.objects.filter(tag__name='Музыка')
+#     template_name = "hashtags/product_music.html"
+#
+#     def get_queryset(self):
+#         return self.queryset
 
 class ProductDetailView(generic.DetailView):
     template_name = "hashtags/product_detail.html"
