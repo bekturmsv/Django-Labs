@@ -20,6 +20,9 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/">Главная</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/register">Создать аккаунт</a>
+        </li>
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -33,7 +36,7 @@
         </li>
 
       </ul>
-      <form action="{% url 'search' %}" method="GET" class="d-flex" role="search">
+      <form action="{% url 'books:search' %}" method="GET" class="d-flex" role="search">
         <input class="form-control me-2" type="search" name="q" placeholder="Поиск" aria-label="Поиск">
         <button class="btn btn-outline-success" type="submit">Поиск</button>
       </form>
