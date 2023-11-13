@@ -22,9 +22,9 @@ class ProductCL(models.Model):
     SEX = (
         ("Not Indicated", "Not Indicated"),
         ("men", "men"),
-        ("women", "Women"),
-        ("Uni", "Uni"),
-        ("Kids", "Kids")
+        ("women", "women"),
+        ("uni", "uni"),
+        ("kids", "kids")
     )
 
     SIZES = (
